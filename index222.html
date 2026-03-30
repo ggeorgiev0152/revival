@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="./favicon.png">
 </head>
 
 <body>
@@ -18,7 +17,7 @@
     <div id="arrows-container"></div>
     <nav class="navbar">
         <div class="logo">$REVIVAL</div>
-        <div class="nav-links" id="nav-links">
+        <div class="nav-links">
             <a href="https://x.com/i/communities/2038576385539580007/" target="_blank" rel="noopener noreferrer"
                 class="nav-btn" style="display: flex; align-items: center;" title="Community on X">
                 <svg viewBox="0 0 24 24" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -26,13 +25,8 @@
                         d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
             </a>
-            <a href="#about" class="nav-btn" onclick="toggleNav()">About</a>
-            <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" class="nav-btn buy-btn" onclick="toggleNav()">Buy Now</a>
-        </div>
-        <div class="burger-menu" id="burger-menu" onclick="toggleNav()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <a href="#about" class="nav-btn">About</a>
+            <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" class="nav-btn buy-btn">Buy Now</a>
         </div>
     </nav>
     <main class="hero">
@@ -40,8 +34,7 @@
         <div class="ca-container">
             <span class="ca-label">CA:</span>
             <span class="ca-address" id="ca-text"
-                style="font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.52vh;">Coming soon... Check X
-                for update!</span>
+                style="font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.52vh;">Coming soon... Check X</span>
             <button class="copy-btn" onclick="copyCA()" title="Copy Address">
                 <svg viewBox="0 0 24 24" width="1.8vh" height="1.8vh" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -118,22 +111,6 @@
                 btn.classList.add('copied');
                 setTimeout(() => btn.classList.remove('copied'), 1500);
             });
-        }
-
-        // Toggle Mobile Navigation
-        function toggleNav() {
-            const nav = document.getElementById('nav-links');
-            const burger = document.getElementById('burger-menu');
-            nav.classList.toggle('active');
-            burger.classList.toggle('active');
-            
-            // Toggle body scroll locking
-            if (nav.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-                document.body.style.overflowX = 'hidden';
-            }
         }
     </script>
 </body>
